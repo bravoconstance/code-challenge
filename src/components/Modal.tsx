@@ -3,6 +3,8 @@ import { useSnapshot } from "valtio";
 import * as GlobalStore from "@/stores/GlobalStore";
 
 const ModalWrap = styled.div`
+  padding: 10px 20px;
+  box-sizing: border-box;
   width: 480px;
   height: 600px;
   border-radius: 10px;
@@ -10,23 +12,11 @@ const ModalWrap = styled.div`
   background-color: ${(props) => props.theme.backgroundColor};
 `;
 
-const SwitchButton = styled.button`
-  width: 40px;
-  height: 20px;
-`;
-
 interface IModal {
   children: React.ReactNode;
 }
 const Modal: React.FC<IModal> = ({ children }) => {
-  const globalStore = useSnapshot(GlobalStore.store);
-
-  return (
-    <ModalWrap>
-      {children}
-      <SwitchButton onClick={GlobalStore.setTheme}>切换</SwitchButton>
-    </ModalWrap>
-  );
+  return <ModalWrap>{children}</ModalWrap>;
 };
 
 export default Modal;

@@ -2,9 +2,10 @@
 
 import Modal from "@/components/Modal";
 import ModalTitle from "@/components/ModalTitle";
-import Button from "@/components/Button";
 import styled from "styled-components";
 import ThemeProvider from "./provider";
+import EnterAddress from "@/components/AddressInput";
+import ModalBody from "@/components/ModalBody";
 
 const MainWrap = styled.div`
   background: #b7b7b7;
@@ -20,7 +21,7 @@ export default function Home() {
       <MainWrap>
         <Modal>
           <ModalTitle title="Deposit ATOM" />
-          <Button></Button>
+          <ModalBody />
         </Modal>
       </MainWrap>
     </ThemeProvider>
