@@ -1,12 +1,21 @@
-const light = {
-  backgroundColor: "#000",
-  textColor: "#fff",
-  closeButtonBg: "#242323",
-  closeButton: "#fff",
-  switcherColor: "#fff",
+const dark = {
+  backgroundColor: "#fff",
+  textColor: "#000",
+  closeButtonBg: "#e6e6e6",
+  closeButton: "#000",
+  switcherColor: "#000",
   input: {
-    bgColor: "#242222",
+    bgColor: "#e6e6e6",
+    textColor: "#000",
+  },
+  tip: {
+    bgColor: "#e6e6e6",
+    textColor: "#000",
+  },
+  transfer: {
+    bgColor: "#000",
+    textColor: "#fff",
   },
 };
 
-export default light;
+export default dark;

@@ -20,6 +20,7 @@ const Input = styled.input`
   height: 40px;
   border: none;
   outline: none;
+  color: ${(props) => props.theme.input.textColor};
   background: ${(props) => props.theme.input.bgColor};
   border-radius: 0 10px 10px 0;
   padding: 2px 4px;

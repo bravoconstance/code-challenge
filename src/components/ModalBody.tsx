@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useContext } from "react";
+import { Fragment, useContext } from "react";
 import { ThemeContext } from "styled-components";
 import AddressInput from "./AddressInput";
 
@@ -7,6 +7,9 @@ import FromSVG from "@/assets/input-affix1.svg";
 import ToSVG from "@/assets/input-affix2.svg";
 import EditSVG from "@/assets/edit.svg";
 import AmountSelect from "./AmountSelect";
+import TaggedButton from "./TaggedButton";
+import TimeTip from "./TimeTips";
+import TransferButton from "./TransferButton";
 
 const ModadBodyWrapper = styled.div`
   margin-top: 16px;
@@ -26,7 +29,20 @@ const FormItemInline = styled.div`
   }
 `;
 
+const FormItem = styled.div`
+  margin-top: 20px;
+  width: 100%;
+`;
+
+const ButtonList = styled.ul`
+  display: flex;
+  gap: 5px;
+  float: right;
+  margin-top: 5px;
+`;
+
 interface IModalBody {}
+
 const ModalTitle: React.FC<IModalBody> = () => {
   const themeContext = useContext(ThemeContext);
 
@@ -47,9 +63,16 @@ const ModalTitle: React.FC<IModalBody> = () => {
             placeholder="asmo1xy5y...w9a"
           />
         </FormItemInline>
-        <FormItemInline>
-          <AmountSelect></AmountSelect>
-        </FormItemInline>
+        <FormItem>
+          <AmountSelect />
+        </FormItem>
+        <ButtonList>
+          <TaggedButton content={"Max"} onClick={() => {}}></TaggedButton>
+          <TaggedButton content={"1/2"} onClick={() => {}}></TaggedButton>
+          <TaggedButton content={"1/3"} onClick={() => {}}></TaggedButton>
+        </ButtonList>
+        <TimeTip />
+        <TransferButton />
       </form>
     </ModadBodyWrapper>
   );

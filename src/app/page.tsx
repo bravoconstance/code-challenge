@@ -6,6 +6,7 @@ import styled from "styled-components";
 import ThemeProvider from "./provider";
 import EnterAddress from "@/components/AddressInput";
 import ModalBody from "@/components/ModalBody";
+import CancelButton from "@/components/CancelButton";
 
 const MainWrap = styled.div`
   background: #b7b7b7;
@@ -22,6 +23,7 @@ export default function Home() {
         <Modal>
           <ModalTitle title="Deposit ATOM" />
           <ModalBody />
+          <CancelButton />
         </Modal>
       </MainWrap>
     </ThemeProvider>
