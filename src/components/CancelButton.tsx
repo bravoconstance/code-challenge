@@ -1,6 +1,9 @@
 import { useContext } from "react";
-import styled, { ThemeContext, useTheme } from "styled-components";
-import CloseSVG from "@/assets/close.svg";
+import styled, { ThemeContext } from "styled-components";
+
+interface IButton {
+  onClick?: () => void;
+}
 
 const ButtonBg = styled.button`
   width: 100%;
@@ -16,9 +19,10 @@ const ButtonBg = styled.button`
   border: none;
   font-size: 16px;
   font-weight: 600;
+  cursor: pointer;
 `;
 
-const CancelButton = () => {
+const CancelButton: React.FC<IButton> = ({ onClick }) => {
   const theme = useContext(ThemeContext);
 
   return <ButtonBg>Cancel</ButtonBg>;

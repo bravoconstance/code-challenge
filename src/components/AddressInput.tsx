@@ -1,6 +1,5 @@
-import { Fragment, useContext } from "react";
+import { useContext } from "react";
 import styled, { ThemeContext, useTheme } from "styled-components";
-import CloseSVG from "@/assets/close.svg";
 
 interface IInput {
   label?: React.ReactNode;
@@ -23,7 +22,6 @@ const Input = styled.input`
   color: ${(props) => props.theme.input.textColor};
   background: ${(props) => props.theme.input.bgColor};
   border-radius: 0 10px 10px 0;
-  padding: 2px 4px;
 `;
 
 const SVGWrapper = styled.div`

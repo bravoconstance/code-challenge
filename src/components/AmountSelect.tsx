@@ -1,5 +1,5 @@
 import { Fragment, useContext } from "react";
-import styled, { ThemeContext, useTheme } from "styled-components";
+import styled, { ThemeContext } from "styled-components";
 import CoinSVG from "@/assets/cosmos-icon30.svg";
 
 interface ISelect {}
@@ -42,7 +42,7 @@ const SVGWrapper = styled.div`
 `;
 
 const Input = styled.input`
-  width: calc(100% - 168px);
+  width: calc(100% - 158px);
   height: 48px;
   color: ${(props) => props.theme.input.textColor};
   border: 1px solid #8a8a8a;
@@ -50,11 +50,11 @@ const Input = styled.input`
   border-right: none;
   outline: none;
   background: transparent;
-  padding: 2px 4px;
+  padding: 2px 10px;
 `;
 
 const EndAdornment = styled.div`
-  width: 120px;
+  width: 110px;
   height: 48px;
   border-radius: 0 8px 8px 0;
   border: 1px solid #8a8a8a;
@@ -65,6 +65,7 @@ const EndAdornment = styled.div`
   color: ${(props) => props.theme.input.textColor};
   p {
     color: #8a8a8a;
+    font-size: 12px;
   }
 `;
 
