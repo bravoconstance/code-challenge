@@ -14,7 +14,9 @@ const Label = styled.p`
   margin-bottom: 10px;
 `;
 
-const Input = styled.input`
+const Input = styled.input.attrs({
+  type: "text",
+})`
   width: 160px;
   height: 40px;
   border: none;
@@ -66,7 +68,7 @@ const AddressInput: React.FC<IInput> = ({
       <Label>{label}</Label>
       <InputWrapper>
         <SVGWrapper>{startAdornment}</SVGWrapper>
-        <Input type="text" placeholder={placeholder} />
+        <Input placeholder={placeholder} />
         <EditSVGWrapper>{endAdornment}</EditSVGWrapper>
       </InputWrapper>
     </div>

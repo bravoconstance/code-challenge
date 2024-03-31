@@ -41,7 +41,9 @@ const SVGWrapper = styled.div`
   }
 `;
 
-const Input = styled.input`
+const Input = styled.input.attrs({
+  type: "text",
+})`
   width: calc(100% - 158px);
   height: 48px;
   color: ${(props) => props.theme.input.textColor};
